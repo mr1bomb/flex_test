@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>flex练习</title>
+    <style>
+        #flex {
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-align-items: center;
+            height: 400px;
+            border: 1px solid #d01014;
+        }
+
+        #item1 {
+            width: 120px;
+            height: 50px;
+            margin: 20px;
+            border: 1px solid #72A664;
+        }
+
+        #item2 {
+            width: 150px;
+            height: 100px;
+            margin: 20px;
+            border: 1px solid #72A664;
+        }
+
+        #item3 {
+            width: 150px;
+            height: 40px;
+            margin: 20px;
+            border: 1px solid #72A664;
+        }
+
+        #item4 {
+            width: 150px;
+            height: 200px;
+            margin: 20px;
+            border: 1px solid #72A664;
+        }
+        @media all and (max-width: 640px){
+            #item4{
+                order: 0;
+            }
+            #item1{
+                order: 1;
+            }
+            #item2{
+                order:1;
+            }
+            #item3{
+                order:1;
+            }
+            #flex{
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -webkit-align-items: flex-start;
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="flex">
+    <div id="item1"></div>
+    <div id="item2"></div>
+    <div id="item3"></div>
+    <div id="item4"></div>
+</div>
+</body>
